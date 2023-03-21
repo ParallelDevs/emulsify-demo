@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - img: The image to display.
+ */
+#}
+
+{% set image_src = logo %}
+
+<div class="menu-logo">
+  {% include "@atoms/images/image/_image.twig" with {
+    image_src: image_src|default(img_element['#uri']),
+  } %}
+</div>

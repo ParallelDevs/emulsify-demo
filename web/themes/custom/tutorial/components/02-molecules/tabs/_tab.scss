@@ -1,0 +1,59 @@
+.tabs__link {
+  // For Drupal local tasks.
+  &--local-tasks {
+    background-color: clr(white);
+    color: clr(charcoal-700);
+    padding: $space;
+    position: relative;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: clr(charcoal-400);
+    }
+
+    &.is-active {
+      background-color: clr(black);
+      color: clr(white);
+    }
+  }
+
+  &--side {
+    color: clr(gray);
+    font: normal normal 700 1.25rem/1.2 $font-heading;
+    padding-right: $space-double;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    @include large {
+      font-size: 2rem;
+    }
+
+    &.is-active,
+    &:hover,
+    &:focus {
+      color: clr(gray);
+    }
+
+    &.is-active {
+      padding-left: $space;
+
+      @include medium {
+        padding-right: 0;
+      }
+
+      &::before {
+        background: clr(primary-900);
+        content: '';
+        height: 80%;
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: transform 0.3s ease-in-out;
+        width: 4px;
+      }
+    }
+  }
+}

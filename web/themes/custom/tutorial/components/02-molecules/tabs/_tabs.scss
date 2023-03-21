@@ -1,0 +1,90 @@
+/* Tab Navigation */
+.tabs {
+  padding: $space-double 0;
+
+  &--side {
+    @include medium {
+      display: flex;
+    }
+
+    &__content {
+      @include medium {
+        padding-left: $space-double;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  &__wrapper {
+    @include medium {
+      min-width: max-content;
+      padding-right: $space-quadruple;
+    }
+
+    @include large {
+      padding-right: $space-quintuple;
+    }
+
+    & > h2 {
+      margin-bottom: $space-triple;
+
+      @include large {
+        margin-bottom: $space-quintuple;
+      }
+    }
+  }
+
+  &__nav {
+    @include list-reset;
+
+    &--local-tasks {
+      display: flex;
+      margin-top: 6em;
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+
+      li {
+        display: inline-flex;
+      }
+    }
+
+    &--side {
+      margin-bottom: $space-triple;
+      min-width: max-content;
+
+      @include medium {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+
+      li:not(:last-child) {
+        margin-bottom: $space-double;
+
+        @include medium {
+          margin-bottom: $space-quadruple;
+        }
+      }
+    }
+  }
+
+  /* Tab Content (hidden only in full #tabs js version) */
+  &__tab {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  /* No-js fallback */
+  &.no-js {
+    &__tab.is-active {
+      display: block;
+    }
+  }
+}

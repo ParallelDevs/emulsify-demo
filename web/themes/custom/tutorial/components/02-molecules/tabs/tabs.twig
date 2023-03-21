@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ * Theme override to display primary and secondary local tasks.
+ *
+ * Available variables:
+ * - primary: HTML list items representing primary tasks.
+ * - secondary: HTML list items representing primary tasks.
+ *
+ * Each item in these variables (primary and secondary) can be individually
+ * themed in menu-local-task.html.twig.
+ */
+#}
+
+{# Drupal Specific #}
+{% if primary %}
+  <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+  <ul {{ bem('tabs__nav', ['local-tasks']) }}>{{ primary }}</ul>
+{% endif %}
+{% if secondary %}
+  <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+  <ul>{{ secondary }}</ul>
+{% endif %}
+
+{# Component Library Specific (javascript version) #}
+{% if not primary %}
+  {% set tabs_modifiers = tabs_modifiers|default(['local-tasks']) %}
+
+  {{ attach_library('emulsify/tabs') }}
+
+  <div id="tabs" {{ bem('no-js tabs', tabs_modifiers, '') }}>
+    <div {{ bem('wrapper', [], 'tabs') }}>
+      {% if tabs_title %}
+        {% include "@atoms/text/headings/_heading.twig" with {
+          heading_level: 2,
+          heading: tabs_title,
+        } %}
+      {% endif %}
+      <ul {{ bem('nav', tabs_modifiers, 'tabs') }}>
+        {% for key, tab in tabs %}
+          {% include "@molecules/tabs/_tab.twig" with {
+            tab_link: "#tab-" ~ key,
+            tab_text: tab.tab_text,
+            tab_modifiers: tab.tab_modifiers,
+          } %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% for key, tab in tabs %}
+      <div class="tabs__tab{% if key == 0 %} is-active{% endif %}">
+        <div id="tab-{{ key }}" {{ bem('content', [], 'tabs') }}>
+          <p>{{ tab.tab_content }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

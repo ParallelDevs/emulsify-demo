@@ -1,0 +1,41 @@
+/*
+ * General Variables
+ * Note: colors should go into
+ * components/00-base/01-colors/_color-vars.css
+ * and breakpoint related vars into
+ * components/00-base/base/_breakpoints.css
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+
+// Fonts
+$font-body: 'Roboto', sans-serif;
+$font-heading: 'Roboto', sans-serif;
+
+// Spacing
+$space: 1rem;
+
+// Times
+$space-double: calc($space * 2);
+$space-triple: calc($space * 3);
+$space-quadruple: calc($space * 4);
+$space-quintuple: calc($space * 5);
+$space-sextuple: calc($space * 6);
+$space-septuple: calc($space * 7);
+
+// Divided
+$space-one-half: calc($space/2);
+$space-one-third: calc($space/3);
+$space-one-fourth: calc($space/4);
+$space-one-fifth: calc($space/5);
+$space-one-sixth: calc($space/6);
+$space-one-seventh: calc($space/7);
+$space-one-eighth: calc($space/8);
+
+/*
+ * Use this on the outer wrapper of page-level elements.
+ * It ensures consistent spacing between elements on the page.
+ */
+@mixin space-stack-page {
+  margin-bottom: $space-double;
+}
