@@ -3,7 +3,7 @@
  * All arguments are optional. If not defined, the defaults below will be used
 */
 
-$color-heading: clr(accent);
+$color-heading: clr(text);
 
 @mixin heading-xl(
   $font-family: $font-heading,
@@ -145,24 +145,30 @@ $color-heading: clr(accent);
   }
 }
 
-.h1 {
+.h1,
+h1 {
   @include heading-xl;
 }
 
-.h2 {
+.h2,
+h2 {
   @include heading-large;
 }
 
-.h3 {
+.h3,
+h3 {
   @include heading-medium;
 }
 
-.h4 {
+.h4,
+h4 {
   @include heading-small;
 }
 
 .h5,
-.h6 {
+h5,
+.h6,
+h6 {
   @include heading-xs;
 }
 

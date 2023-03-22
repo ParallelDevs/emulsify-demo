@@ -1,0 +1,6 @@
+title: 'Call to action'
+description: 'A call to action is a link that prompts the user to take action.'
+button_text: 'Click here'
+button_url: 'https://www.google.com'
+img_src: 'https://picsum.photos/600/400'
+img_alt: 'Placeholder image'

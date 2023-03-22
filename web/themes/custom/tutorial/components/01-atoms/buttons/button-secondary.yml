@@ -1,0 +1,4 @@
+button__content: 'Secondary Button'
+button__url: '#'
+button__modifiers:
+  - 'secondary'

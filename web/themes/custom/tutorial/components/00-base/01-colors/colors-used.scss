@@ -9,7 +9,7 @@ $defaultColors: (
   background-section: colors-vars.$gray-lightest,
   primary: colors-vars.$blue,
   secondary: colors-vars.$purple,
-  accent: colors-vars.$gray-dark,
+  accent: colors-vars.$blue-light,
   accent-high: colors-vars.$black,
   highlight: colors-vars.$gray-lighter,
   highlight-high: colors-vars.$gray-lightest,
@@ -27,7 +27,7 @@ $darkColors: (
   background-section: colors-vars.$gray-dark,
   primary: colors-vars.$blue,
   secondary: colors-vars.$purple,
-  accent: colors-vars.$gray-lightest,
+  accent: colors-vars.$blue-light,
   accent-high: colors-vars.$white,
   highlight: colors-vars.$gray-dark,
   highlight-high: colors-vars.$gray-darker,
@@ -75,7 +75,7 @@ $darkColors: (
 
   // Create custom properties for dark colors, an duse them if the user's OS has dark mode enabled
   @media (prefers-color-scheme: dark) {
-    @each $name, $color in $darkColors {
+    @each $name, $color in $defaultColors {
       --c-#{$name}: #{$color};
     }
   }

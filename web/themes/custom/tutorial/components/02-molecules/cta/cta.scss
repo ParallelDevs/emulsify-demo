@@ -1,0 +1,38 @@
+.cta {
+  &__container {
+    overflow: hidden;
+    background-color: clr(background-section);
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 300px;
+  }
+
+  &__content {
+    flex: 1 1 60%;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+
+    .button {
+      margin-top: 16px;
+    }
+  }
+
+  &__image {
+    flex: 1 1 40%;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

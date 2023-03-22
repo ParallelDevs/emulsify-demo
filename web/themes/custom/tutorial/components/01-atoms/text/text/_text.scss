@@ -3,6 +3,7 @@
 */
 @mixin paragraph($margin: 0 0 1em) {
   margin: $margin;
+  color: clr(text);
 }
 
 .paragraph {

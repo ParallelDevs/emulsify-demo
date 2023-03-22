@@ -2,16 +2,16 @@
 // e.g. `default` and `default-dark`. Or `purple` and `purple-dark`.
 $button-colors: (
   primary: (
-    text: clr(text-inverse),
+    text: clr(muted),
     bg: clr(primary),
     text-hover: clr(primary),
-    bg-hover: clr(highlight),
+    bg-hover: clr(accent),
   ),
   primary-dark: (
-    text: clr(text),
+    text: clr(muted),
     bg: clr(primary),
-    text-hover: clr(text),
-    bg-hover: clr(highlight-high),
+    text-hover: clr(muted),
+    bg-hover: clr(accent),
   ),
   secondary: (
     text: clr(text-inverse),
@@ -51,12 +51,12 @@ $button-colors: (
 // The button-base mixin contains styles that apply to all buttons
 // regardless of color or size.
 @mixin button-base {
-  border: none;
+  border-radius: $space-one-half;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
   text-align: center;
-  text-transform: uppercase;
+  width: fit-content;
 }
 
 // Button color variations
@@ -80,12 +80,12 @@ $button-colors: (
 // Button size variations
 @mixin button-medium {
   line-height: 1.4;
-  padding: $space-one-half $space;
+  padding: $space-one-half $space-double;
 }
 
 @mixin button-large {
   line-height: 2;
-  padding: $space $space-double;
+  padding: $space $space-triple;
 }
 
 .button {

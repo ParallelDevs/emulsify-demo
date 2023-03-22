@@ -1,0 +1,35 @@
+{#
+/**
+ * Available variables:
+ * - cta__base_class - the base classname
+ * - cta__modifiers - array of modifiers to add to the base classname
+ * - cta__blockname - blockname prepended to the base classname
+ */
+#}
+
+{% set cta__base_class = cta__base_class|default('cta') %}
+
+<div {{ bem('container', [], cta__base_class) }}>
+  <div {{ bem('content', [], cta__base_class) }}>
+    {% include "@atoms/text/headings/_heading.twig" with {
+      heading: title,
+      heading__level: 2,
+    } %}
+    {% include "@atoms/text/text/01-paragraph.twig" with {
+      paragraph_content: description,
+    } %}
+    {% if button_text %}
+      {% include "@atoms/buttons/button.twig" with {
+        button__content: button_text,
+        button__url: button_url,
+        button__target: '_blank',
+      } %}
+    {% endif %}
+  </div>
+  <div {{ bem('image', [], cta__base_class) }}>
+    {% include "@atoms/images/image/_image.twig" with {
+      image_src: img_src,
+      image_alt: img_alt,
+    } %}
+  </div>
+</div>

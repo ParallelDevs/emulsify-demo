@@ -1,2 +1,2 @@
-button__content: 'Twig Button'
-button_url: '#'
+button__content: 'Primary Button'
+button__url: '#'

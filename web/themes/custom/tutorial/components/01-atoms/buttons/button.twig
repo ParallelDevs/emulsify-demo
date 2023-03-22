@@ -10,14 +10,30 @@
 #}
 
 {% set button__base_class = button__base_class|default('button') %}
-{% set button__attributes = button__attributes|default([]) %}
 
-{% set button__attributes = button__attributes|merge({
-  'class': bem(button__base_class, button__modifiers, button__blockname, button__additional_classes),
-}) %}
+{% set additional_attributes = {
+  class: bem(button__base_class, button__modifiers, button__blockname),
+} %}
 
-<button {{ add_attributes(button__attributes) }}>
-  {% block button__content %}
+<a
+  {{ add_attributes(additional_attributes) }}
+  {% for attribute, value in link_attributes %}
+    {{ attribute }}="{{ value }}"
+  {% endfor %}
+  href="{{ button__url }}"
+  {% if button__target %}
+    target="{{ button__target }}"
+  {% endif %}
+>
+  {% if button_icon %}
+    {% include "@atoms/images/icons/_icon.twig" with {
+      icon_url: button_icon.icon_url,
+      icon_name: button_icon.icon_name,
+      icon_height: button_icon.icon_height,
+      icon_width: button_icon.icon_width,
+    } %}
+  {% endif %}
+  {%- block button__content -%}
     {{ button__content }}
-  {% endblock %}
-</button>
+  {%- endblock -%}
+</a>
