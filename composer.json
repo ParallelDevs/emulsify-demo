@@ -24,6 +24,7 @@
         "drupal/emulsify_twig": "^4.0",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/pathauto": "^1.11",
+        "drupal/theme_switcher": "^2.0",
         "drush/drush": "^11.5",
         "emulsify-ds/emulsify-drupal": "^4.4"
     },
