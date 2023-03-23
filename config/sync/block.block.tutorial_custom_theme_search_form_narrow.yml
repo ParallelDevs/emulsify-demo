@@ -1,0 +1,23 @@
+uuid: 11daaf0f-9a4d-4037-b3d3-ac890d42a290
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - tutorial_custom_theme
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: tutorial_custom_theme_search_form_narrow
+theme: tutorial_custom_theme
+region: header
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

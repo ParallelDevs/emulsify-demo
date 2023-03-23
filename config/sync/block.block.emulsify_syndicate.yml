@@ -1,0 +1,23 @@
+uuid: 9a5ff2bc-0c6a-4396-8f46-96860a940f94
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+  theme:
+    - emulsify
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: emulsify_syndicate
+theme: emulsify
+region: header
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

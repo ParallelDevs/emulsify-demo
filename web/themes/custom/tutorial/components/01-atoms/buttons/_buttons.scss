@@ -97,4 +97,8 @@ $button-colors: (
     @include button-color-secondary;
     @include button-large;
   }
+
+  &--danger {
+    background-color: clr(error);
+  }
 }

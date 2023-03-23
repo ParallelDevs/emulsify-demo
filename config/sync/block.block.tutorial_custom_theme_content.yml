@@ -1,0 +1,22 @@
+uuid: b5520dc6-d90f-4adf-892b-1b3a6db856ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorial_custom_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: tutorial_custom_theme_content
+theme: tutorial_custom_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 8eba5b60-4a37-4350-9d8e-d75d125267f3
+langcode: en
+status: false
+dependencies:
+  theme:
+    - tutorial
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: tutorial_page_title
+theme: tutorial
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: 66b7b18f-ab53-44c0-a34b-9ae63301bdb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: admin_edit_theme
+label: 'Admin edit theme'
+weight: 0
+theme: tutorial
+admin_theme: tutorial
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page

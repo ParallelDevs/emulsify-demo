@@ -1,0 +1,22 @@
+uuid: aef873ef-d51d-4a10-bee7-cc47e860ee83
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - tutorial
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: tutorial_powered
+theme: tutorial
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

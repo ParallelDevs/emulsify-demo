@@ -1,0 +1,10 @@
+uuid: 6e400b7f-a0c0-491e-9039-145d789bee28
+langcode: en
+status: true
+dependencies: {  }
+id: cta
+label: CTA
+icon_uuid: null
+icon_default: null
+description: 'Basic CTA with title, description, image, and button.'
+behavior_plugins: {  }

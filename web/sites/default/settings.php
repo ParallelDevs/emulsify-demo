@@ -831,3 +831,5 @@ ini_set('display_errors', TRUE);
 ini_set('display_startup_errors', TRUE);
 $conf['error_level'] = 2;
 $config['system.logging']['error_level'] = 'verbose';
+
+$settings['config_sync_directory'] = '../config/sync';
