@@ -9,7 +9,7 @@
  *
  * - heading - the content of the heading (typically text)
  *
- * - heading_url - (optional) the url the heading should poing to
+ * - heading__url - (optional) the url the heading should poing to
  * - heading_link_attributes - key/value attributes to pass to link
  * - heading_link_base_class - override the link base class
  * - heading_link_modifiers - override the link modifiers
@@ -19,10 +19,10 @@
 {% set heading__base_class = heading__base_class|default('heading') %}
 
 <h{{ heading__level }} {{ bem(heading__base_class, heading__modifiers, heading__blockname) }}>
-  {% if heading_url %}
+  {% if heading__url %}
     {% include "@atoms/links/link/link.twig" with {
       "link_content": heading,
-      "link_url": heading_url,
+      "link_url": heading__url,
       "link_attributes": heading_link_attributes,
       "link_base_class": heading_link_base_class,
       "link_modifiers": heading_link_modifiers,
