@@ -7,7 +7,7 @@ You must have the following requirements installed locally for being able to set
 - [Docker 4.15.0](https://www.docker.com/products/docker-desktop/)
 - [Composer 2.4.3](https://getcomposer.org/doc/00-intro.md)
 - [NVM 0.39.2](https://github.com/nvm-sh/nvm)
-- Node.js 18.11.0 (using nvm: `nvm install v8.19.2`)
+- Node.js 18.11.0 (using nvm: `nvm install v18.11.0`)
 - [NPM 8.19.2](https://docs.npmjs.com/cli/v6/commands/npm-install)
 
 ## Installation
